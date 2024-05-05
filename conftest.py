@@ -8,5 +8,6 @@ from selenium.webdriver.common.by import By
 def driver(request):
     driver = webdriver.Chrome()
     request.cls.driver = driver
+    driver.get("https://stellarburgers.nomoreparties.site/")
     yield
     driver.quit()
