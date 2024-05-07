@@ -1,14 +1,15 @@
 import pytest
-from conftest import driver
 
+from conftest import driver
 from tests.locators import Locators
+from config import URL
 
 
 class TestConstructorPage:
     def test_open_constructor(self):
         self.driver.find_element(*Locators.ACCOUNT_BUTTON).click()
         self.driver.find_element(*Locators.CONSTRUCTOR_BUTTON).click()
-        assert self.driver.current_url == "https://stellarburgers.nomoreparties.site/"
+        assert self.driver.current_url == URL
 
     def test_open_sauces_section(self):
         self.driver.find_element(*Locators.SAUCES_ITEM).click()

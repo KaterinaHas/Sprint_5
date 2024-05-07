@@ -18,3 +18,4 @@ class Locators:
     SAUCES_ITEM = (By.XPATH, "//span[text() = 'Соусы']/..")  # Вкладка Соусы
     BUN_ITEM = (By.XPATH, "//span[text() = 'Булки']/..")  # Вкладка Булки
     FILLING_ITEM = (By.XPATH, "//span[text() = 'Начинки']/..")  # Вкладка Начинки
+    NOT_CORRECT_PASSWORD_ERROR = (By.XPATH, "//p[text()='Некорректный пароль']")  # Ошибка ввода пароля

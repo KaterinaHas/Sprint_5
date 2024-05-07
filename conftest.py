@@ -1,13 +1,12 @@
 import pytest
 
 from selenium import webdriver
-from selenium.webdriver.common.by import By
+from config import URL
 
-
-@pytest.fixture(autouse=True)
+@pytest.fixture()
 def driver(request):
     driver = webdriver.Chrome()
     request.cls.driver = driver
-    driver.get("https://stellarburgers.nomoreparties.site/")
+    driver.get(URL)
     yield
     driver.quit()
